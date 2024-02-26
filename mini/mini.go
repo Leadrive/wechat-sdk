@@ -21,7 +21,7 @@ type SDK struct {
 	accessToken     string
 	RefreshInternal time.Duration
 
-	callback func(accessToken string, expireIn int, err error)
+	callback func(appid, accessToken string, expireIn int, err error)
 }
 
 func New(appid, secret string, autoManageToken bool) (m *SDK, err error) {
